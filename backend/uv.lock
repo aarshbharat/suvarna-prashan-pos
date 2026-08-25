@@ -719,9 +719,9 @@ wheels = [
 ]
 
 [[package]]
-name = "suvarna-prashan"
+name = "suvarna-prashan-backend"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "psycopg2-binary" },

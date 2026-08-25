@@ -1,21 +1,14 @@
 [project]
-name = "suvarna-prashan"
+name = "suvarna-prashan-backend"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+description = "Billing backend for Samarth Shishu Shikshan Samiti"
 authors = [
-    { name = "aarshbharat", email = "aarshbharat@gmail.com" }
+    { name = "Aarsh Bharat", email = "aarshbharat@gmail.com" }
 ]
 requires-python = ">=3.14"
+
 dependencies = [
     "fastapi[standard]>=0.141.1",
     "psycopg2-binary>=2.9.12",
     "sqlalchemy>=2.0.52",
 ]
-
-[project.scripts]
-suvarna-prashan = "suvarna_prashan:main"
-
-[build-system]
-requires = ["uv_build>=0.12.5,<0.13.0"]
-build-backend = "uv_build"
