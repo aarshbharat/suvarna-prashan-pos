@@ -1,9 +1,14 @@
+import os
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Numeric, Date
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-engine = create_engine(
-    "postgresql+psycopg2://postgres:postgres@localhost:5433/suvarna_prashan_db"
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL environment variable is not set")
+
+engine = create_engine(DATABASE_URL)
+
 SessionLocal = sessionmaker(bind=engine)
 
 Base = declarative_base()
